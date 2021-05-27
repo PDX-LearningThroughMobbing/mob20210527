@@ -1,5 +1,7 @@
 # Learning Through Mobbing
 
+Commit test
+
 Driver: does all the typing
 Navigator: Does all the deciding
 Mob: Consults and discusses
