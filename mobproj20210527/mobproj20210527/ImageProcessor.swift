@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 class ImageProcessor: ObservableObject {
-    @Published
-    
+    @Published    
     var image: UIImage
     
     init(filename: String) {
@@ -29,7 +28,8 @@ class ImageProcessor: ObservableObject {
     }
     
     func rotate() {
-        image.rotate(radians: 1.57)
+        image = image.rotate(radians: CGFloat.pi/2)
+        save()
     }
     
     public func getDocumentsDirectory() -> URL {
