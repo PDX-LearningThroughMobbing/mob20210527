@@ -11,7 +11,17 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        Image("FullSizeRender.jpg")
+        Image("FullSizeRender")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+            .onTapGesture {
+                rotateImage()                
+            }
+    }
+    
+    func rotateImage() {
+        
     }
 }
 

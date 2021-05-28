@@ -16,6 +16,7 @@
 		2088BB5026607F6F00F0B08F /* mobproj20210527Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088BB4F26607F6F00F0B08F /* mobproj20210527Tests.swift */; };
 		2088BB5B26607F6F00F0B08F /* mobproj20210527UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088BB5A26607F6F00F0B08F /* mobproj20210527UITests.swift */; };
 		2088BB6C26607FE500F0B08F /* FullSizeRender.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2088BB6B26607FE500F0B08F /* FullSizeRender.jpg */; };
+		63D5E13C266083DB005F3DC4 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5E13B266083DB005F3DC4 /* ImageProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2088BB5A26607F6F00F0B08F /* mobproj20210527UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobproj20210527UITests.swift; sourceTree = "<group>"; };
 		2088BB5C26607F6F00F0B08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2088BB6B26607FE500F0B08F /* FullSizeRender.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FullSizeRender.jpg; sourceTree = "<group>"; };
+		63D5E13B266083DB005F3DC4 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				2088BB3826607F6800F0B08F /* mobproj20210527App.swift */,
 				2088BB3A26607F6800F0B08F /* ContentView.swift */,
+				63D5E13B266083DB005F3DC4 /* ImageProcessor.swift */,
 				2088BB3C26607F6F00F0B08F /* Assets.xcassets */,
 				2088BB4126607F6F00F0B08F /* Persistence.swift */,
 				2088BB4626607F6F00F0B08F /* Info.plist */,
@@ -271,6 +274,7 @@
 			files = (
 				2088BB4526607F6F00F0B08F /* mobproj20210527.xcdatamodeld in Sources */,
 				2088BB4226607F6F00F0B08F /* Persistence.swift in Sources */,
+				63D5E13C266083DB005F3DC4 /* ImageProcessor.swift in Sources */,
 				2088BB3B26607F6800F0B08F /* ContentView.swift in Sources */,
 				2088BB3926607F6800F0B08F /* mobproj20210527App.swift in Sources */,
 			);
