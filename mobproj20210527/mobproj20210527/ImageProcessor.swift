@@ -17,7 +17,6 @@ class ImageProcessor: ObservableObject {
         save()
     }
     
-    
     func save() {
         let data = image.jpegData(compressionQuality: 0.5)!
         try! data.write(to: exportDataURL())
@@ -28,8 +27,11 @@ class ImageProcessor: ObservableObject {
     }
     
     func rotate() {
-        image = image.rotate(radians: CGFloat.pi/2)
-        save()
+        DispatchQueue.main.async {
+            self.image = self.image.rotate(radians: CGFloat.pi/2)
+            self.save()
+            print("\(Thread.current.description)")
+        }
     }
     
     public func getDocumentsDirectory() -> URL {
