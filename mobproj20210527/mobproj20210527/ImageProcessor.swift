@@ -17,6 +17,8 @@ class ImageProcessor: ObservableObject {
         save(image: image)
     }
     
+    let queue = DispatchQueue(label: "David")
+    
     func save(image: UIImage) {
         let data = image.jpegData(compressionQuality: 0.5)!
         try! data.write(to: exportDataURL())
@@ -27,19 +29,23 @@ class ImageProcessor: ObservableObject {
     }
     
     func rotate() {
-        var localImage = self.image
-        DispatchQueue.global().async {
-            localImage = self.image.rotate(radians: CGFloat.pi/2)
+      
+        queue.async {
+            let localImage = self.image.rotate(radians: CGFloat.pi/2)
             self.save(image: localImage)
-            print("\(Thread.current.description)")
+            print("rotate \(Thread.current.description)")
+            DispatchQueue.main.async {
+                self.image = localImage
+                print("render \(Thread.current.description)")
+            }
         }
     }
     
     public func getDocumentsDirectory() -> URL {
-            // find all possible documents directories for this user
+            
             let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-            print("The Documents Directory is \(paths)")
-            // just send back the first one, which ought to be the only one
+          
+           
             return paths[0]
         }
     
