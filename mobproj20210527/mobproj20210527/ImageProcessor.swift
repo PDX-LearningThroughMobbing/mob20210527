@@ -14,10 +14,10 @@ class ImageProcessor: ObservableObject {
     
     init(filename: String) {
         image = UIImage(named: filename)!
-        save()
+        save(image: image)
     }
     
-    func save() {
+    func save(image: UIImage) {
         let data = image.jpegData(compressionQuality: 0.5)!
         try! data.write(to: exportDataURL())
     }
@@ -27,9 +27,10 @@ class ImageProcessor: ObservableObject {
     }
     
     func rotate() {
-        DispatchQueue.main.async {
-            self.image = self.image.rotate(radians: CGFloat.pi/2)
-            self.save()
+        var localImage = self.image
+        DispatchQueue.global().async {
+            localImage = self.image.rotate(radians: CGFloat.pi/2)
+            self.save(image: localImage)
             print("\(Thread.current.description)")
         }
     }
@@ -46,7 +47,6 @@ class ImageProcessor: ObservableObject {
         return getDocumentsDirectory().appendingPathComponent("image.jpg")
     }
 }
-
 
 extension UIImage {
     func rotate(radians: CGFloat) -> UIImage {
