@@ -31,14 +31,23 @@ Agree to or change these durations, changes might have to be made in Mobster:
 ## Project Description
 Things we want to do (Capture the concepts people would like to work on or learn about tonight):
         
-- 
-- 
-- 
+- Combine
+- async - in a non url context 
+- camera access
 
 Project description (What we will do):
 
+Single page app that transforms an image on tap - rotate
 
-Come up with a simple (can be done in an hour and a half) project that hits as many of those concepts as possible:
+The transform must be perfomed on a background thread (aync)
+
+If time allows, take a new picture with the camera. 
+
+iPhone - SwiftUI
+
+
+
+Come up with a simple (can be done in an hour and a half) project that hits as many of those concepts as possible.
 
 
 What done looks like:
