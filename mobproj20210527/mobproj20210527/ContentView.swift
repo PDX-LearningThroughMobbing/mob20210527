@@ -9,9 +9,10 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @StateObject var imageProcessor = ImageProcessor(filename: "FullSizeRender")
     
     var body: some View {
-        Image("FullSizeRender")
+        Image(uiImage: imageProcessor.image)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
@@ -21,7 +22,7 @@ struct ContentView: View {
     }
     
     func rotateImage() {
-        
+        imageProcessor.rotate()
     }
 }
 
